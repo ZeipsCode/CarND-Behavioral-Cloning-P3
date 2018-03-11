@@ -51,18 +51,15 @@ The model used an adam optimizer, so the learning rate was not tuned manually (m
 
 #### 3. Appropriate training data
 
-Training data was chosen to keep the vehicle driving on the road. I used a combination of center lane driving, recovering from the left and right sides of the road. Essentially i used only the included data and did not create my own dataset.
+I used a combination of center lane driving, recovering from the left and right sides of the road. Essentially i used only the included data and did not create my own dataset.
 
 ### Model Architecture and Training Strategy
 
 #### 1. Solution Design Approach
 
-The overall strategy for deriving a model architecture was to ...
+My first step was to use a convolution neural network model similar to the LeNet model. I thought this model might be appropriate because it is very good at recognizing certain shapes in the mnist dataset. So if figured it would be doing ok if it was used to recognize lane lines. It did pretty well on the test and validation set and could actually drive the car around most of the track.
 
-My first step was to use a convolution neural network model similar to the LeNet model. I thought this model might be appropriate because it is very good at recognizing shapes in the mnist dataset. So if figured it would be doing ok if it was used to recognize lane lines. 
-It did pretty well on the test and validation set and could actually drive the car around most of the track.
-
-After that i tried the much deeper Nvidia-net introduced in class. But this model turned out to be way too complex and harder to train. In my limited testing it did way worse than the LeNet architecture so i figured i could try and simplify my architecture as much as possible. That way i came up with my architecture of only six layers which works ok on the simulator test track and does not leave the road at any point.
+After that i tried the much deeper Nvidia-net introduced in class. But this model turned out to be way too complex and much harder to train. In my limited testing it did way worse than the LeNet architecture so i figured i could try and simplify my architecture as much as possible. That way i came up with an architecture of only six layers which works ok on the simulator test track and does not leave the road at any point. But it turned out that the net predicted the needed steering angle for the first curve after the bridge at a too low value. So i experimented a bit and found that multiplying the predicted angle by 4 worked to get the car around the track. 
 
 
 #### 2. Creation of the Training Set & Training Process
