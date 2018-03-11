@@ -47,7 +47,7 @@ My model consists of a convolutional neural network with only six layers. First 
 
 #### 2. Model parameter tuning
 
-The model used an adam optimizer, so the learning rate was not tuned manually (model.py line 25).
+The model used an adam optimizer, so the learning rate was not tuned manually (model.py line 66).
 
 #### 3. Appropriate training data
 
