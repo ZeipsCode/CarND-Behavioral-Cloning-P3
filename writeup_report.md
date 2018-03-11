@@ -70,4 +70,4 @@ I only used the included dataset in the Udacity repository to train my network. 
 ![alt text][image7]
 
 
-After augmentation i had 22180 images which i then shuffled for training and put 20 % of it on the validation set. It turned out that training the model for 10 Epochs was enough to get the model to converge so that the validation accuracy did not fall further from that point on.
+After augmentation i had 22180 images which i then shuffled for training and put 20 % of it on the validation set. It turned out that training the model for 10 Epochs was enough to get the model to converge so that the validation loss did not fall further from that point on.
